@@ -55,15 +55,15 @@ function ToDoList() {
         <>
             <h1>Directorio de Contacto</h1>
             <div className="input-group mb-3 mt-4">
-                <input ref={nombreRef} placeholder="Nombre" className="form-control" />
-                <input ref={correoRef} placeholder="Correo Electrónico" className="form-control ms-2" />
+                <input ref={nombreRef} placeholder="Nombre" className="form-control ms-2 rounded-3" />
+                <input ref={correoRef} placeholder="Correo Electrónico" className="form-control ms-2 rounded-3" />
                 
                 <div className="d-flex align-items-center ms-2">
-                    <span>+569</span>
+
                     <input 
                         ref={telefonoRef} 
                         placeholder="Teléfono" 
-                        className="form-control ms-2" 
+                        className="form-control ms-2 rounded-3" 
                         type="text" 
                         maxLength={8} 
                         pattern="[0-9]*"
@@ -73,12 +73,12 @@ function ToDoList() {
                     />
                 </div>
 
-                <input ref={actividadRef} placeholder="Actividad" className="form-control ms-2" />
+                <input ref={actividadRef} placeholder="Actividad" className="form-control ms-2 rounded-3" />
 
-                <button onClick={agregarRegistro} className="btn btn-success ms-2">
+                <button onClick={agregarRegistro} className="btn btn-success ms-2 rounded-3">
                     <i className="bi bi-plus-circle-fill"></i>
                 </button>
-                <button onClick={limpiarCampos} className="btn btn-danger ms-2">
+                <button onClick={limpiarCampos} className="btn btn-danger ms-2 rounded-3">
                     <i className="bi bi-trash"></i>
                 </button>
             </div>

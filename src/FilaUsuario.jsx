@@ -66,7 +66,7 @@ function FilaUsuario(props){
                     <input 
                         value={actividad} 
                         onChange={(e) => setActividad(e.target.value)}
-                        className="form-control" 
+                        className="form-control ms-2" 
                         />
                     ) : (
                     usuario.actividad
@@ -74,15 +74,15 @@ function FilaUsuario(props){
             </td>
             <td>
                 {editando ?(
-                    <button onClick={guardarCambios} className="btn btn-primary btn-sm ms-1">
+                    <button onClick={guardarCambios} className="btn btn-primary btn-sm ms-1 rounded-3">
                         <i className="bi bi-check-circle"></i>
                     </button>
                 ) : (
-                    <button onClick={() => setEditando(true)} className="btn btn-warning btn-sm ms-1">
+                    <button onClick={() => setEditando(true)} className="btn btn-warning btn-sm ms-1 rounded-3">
                         <i className="bi bi-pencil"></i>   
                     </button>
                 )}
-                <button onClick={() => eliminarUsuario(usuario.id)} className="btn btn-danger btn-sm ms-1">
+                <button onClick={() => eliminarUsuario(usuario.id)} className="btn btn-danger btn-sm ms-1 rounded-3">
                     <i className="bi bi-trash"></i>
                 </button>
             </td>
