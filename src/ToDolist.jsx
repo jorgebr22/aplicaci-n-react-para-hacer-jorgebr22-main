@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { v4 as uuid } from 'uuid';
 import TablaUsuarios from "./TablaUsuario";
+import UsuariosExternos from "./UsuariosExternos";
 
 const KEY = "todolist-usuarios";
 
 function ToDoList() {
-    
+
     const [usuarios, setUsuarios] = useState(() => {
         try {
             return JSON.parse(localStorage.getItem(KEY)) || [];
@@ -59,7 +60,6 @@ function ToDoList() {
                 <input ref={correoRef} placeholder="Correo Electrónico" className="form-control ms-2 rounded-3" />
                 
                 <div className="d-flex align-items-center ms-2">
-
                     <input 
                         ref={telefonoRef} 
                         placeholder="Teléfono" 
@@ -93,6 +93,7 @@ function ToDoList() {
                     setUsuarios(nuevosUsuarios);
                 }}
             />
+            <UsuariosExternos />
         </>
     );
 }
